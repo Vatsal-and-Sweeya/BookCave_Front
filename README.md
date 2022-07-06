@@ -1,4 +1,4 @@
-# BookCave- Web app for searching, previweing and downloading books
+# BookCave- Web app for searching, previewing and downloading books
 ## Heroku hosted
 * https://cutt.ly/bookcave_vs
 ## Table of contents
