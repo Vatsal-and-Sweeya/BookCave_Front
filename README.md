@@ -11,7 +11,7 @@
 * Check: https://salty-lake-52292.herokuapp.com/maintool/
 
 ## Collaborator
-Created by [Sweeya Reddy](https://github.com/sweeya2) in collaboration with [Vatsal Gupta](https://github.com/vatsal-ts)
+Created by [Sweeya Reddy](https://github.com/sweeya2) and [Vatsal Gupta](https://github.com/vatsal-ts)
 
 
 
@@ -28,3 +28,4 @@ https://user-images.githubusercontent.com/77005617/177173777-b38beeda-e73f-4a45-
 * Django
 * Html
 * CSS
+* JS
