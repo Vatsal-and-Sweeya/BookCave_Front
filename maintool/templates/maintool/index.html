@@ -1,0 +1,367 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Book Cave</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/png" href="{% static 'maintool/assets/favicon.png' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'maintool/styles.css' %}" rel="stylesheet" />
+        <script type="text/javascript">
+            // Using jQuery.
+            
+            $(function() {
+                $('form').each(function() {
+                    $(this).find('input').keypress(function(e) {
+                        // Enter pressed?
+                        if(e.which == 10 || e.which == 13) {
+                            this.form.submit();
+                        }
+                    });
+            
+                    $(this).find('input[type=submit]').hide();
+                });
+            });
+            </script>
+    </head>
+    
+
+    <body id="page-top" onload="typeWriter()">
+        <!-- Navigation-->
+        
+
+
+        
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="width:100vw;">
+            <div class="container" style="width:95vw;">
+                <a class="navbar-brand" href="#page-top"><img src="{% static 'maintool/assets/img/logo5.png' %}" alt="BookCave" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        
+                        <!-- <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <script>
+            var i = 0;
+            var txt = 'Welcome to Book Cave!';
+            var speed = 140;
+            
+            function typeWriter() {
+              if (i < txt.length) {
+                document.getElementById("mydivfetch").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            }
+        </script>
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-heading text-uppercase" style="margin-bottom: 2rem;" id="mydivfetch"></div>
+                <div class="masthead-subheading" style="font-weight: 350;">Search for any book here ...</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services" style="margin-top: 1.5rem;">Search&nbsp;<i class="fa fa-search" aria-hidden="true"></i></a>
+            </div>
+        </header>
+
+        <!-- Portfolio Grid-->
+        <!--moved to port.html-->
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h3 class="section-subheading text-muted" style="font-size: 23px;">The website enables you to download books with ease!</h3>
+                </div>
+                <ul class="timeline">
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'maintool/assets/img/about/timeline_bulb.jpg' %}" alt="1st" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Idea behind the tool</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">
+                                    We employ distance searching algorithms and subsequent string pattern 
+                                    matches to provide the <b>best download for the title you search
+                                    for.</b><br>Unlike other websites, you don't have to go through the hassle
+                                    of looking up links, you just <b>write the title of the book and hit enter </b>and the website downloads
+                                    the book for you.
+
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'maintool/assets/img/about/timeline_mid.png' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <!-- <h4>March 2011</h4> -->
+                                <h4 class="subheading">Extension Preference</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">We have created a python tool which works in tandem with the website which can be found on <a href="https://github.com/Vatsal-and-Sweeya/BookCave_Front">GitHub<i class="fab fa-github"></i></a> feel free to go through it!<br>
+                            We give preference to .pdf then .epub then .mobi then .fb2 you may change this however you like in the source code!
+                            </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'maintool/assets/img/about/timeline_1st.png' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <!-- <h4>December 2015</h4> -->
+                                <h4 class="subheading">Dependencies</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">
+                                    We work with <a href="https://www.python.org/downloads/" style="text-decoration:none;color:black;">Python(host version 3.9.9)</a> for functionality and use <a href="https://www.djangoproject.com/" style="text-decoration:none;color:black;">Django(host version 4.0)</a> for web integration. 
+                                    The website is hosted on <a href="https://www.heroku.com/" style="text-decoration:none;color:black;">Heroku</a> and is intergated with Git so it auto-updates as versions of libraries and open source contributions improve.
+                               </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'maintool/assets/img/our_website_logo2.png' %}" alt="..." /></div>
+                        
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Services-->
+        <section class="page-section" id="services" style="background-color: #212529;">
+            <div class="container-fluid" style="background-color: #212529;">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase" style="color: #ffc800;">Services</h2>
+                    <h3 class="section-subheading text-muted">Kindly wait for upto 15 seconds for the download as hunt for your book! <br></h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 style="color: white;" class="mybookhead">&nbsp;&nbsp;CHOOSE<br>
+                        <span style="color:#ffc800">&nbsp;&nbsp;YOUR</span><br>&nbsp;&nbsp;BOOK<br></h1>
+                    </div>
+                    <div class="col-sm" style="position:relative;">
+                        <div class="containeroo" style="margin: auto;">
+                            <form action="{% url 'maintool:take_input' %}" name="loginBox" target="#here" method="post">
+                                {% csrf_token %}
+                                <input type="text" placeholder="Search..." name="our_title">
+                                <div class="searchoo"></div>
+                                <input type="submit" style="visibility: hidden;" />
+                            </form>
+                            <!-- <input type="text" placeholder="Search..."> -->
+                            <!-- <div class="searchoo"></div> -->
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                </div>              
+            </div>
+        </section>    
+        
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <br>
+                    <br>
+                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'maintool/assets/img/team/vatsal_dp.jfif' %}" alt="..." />
+                            <h4>Vatsal Gupta</h4>
+                            <p class="text-muted">IIT Guwahati</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/vatsal-ts"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/vatsal-gupta-71a5a2212/"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/vatsal4326/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'maintool/assets/img/team/4.jpg' %}" alt="..." />
+                            <h4>Sweeya Reddy</h4>
+                            <p class="text-muted">IIT Guwahati</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/sweeya2"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/sweeya-reddy-a354b6202/"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/sweeya_/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                </div> -->
+            </div>
+        </section>
+        <!-- Clients-->
+        <!-- <div class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." /></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Contact-->
+
+        <section class="page-section" id="contact">           
+            <div class="container">
+                <br><br>
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://book-cave-sv.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <br><br>
+            </div>           
+        </section>
+
+
+        {% comment %} <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <br>
+                    <br>
+                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+                </div>
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                </form>
+            </div>
+        </section> {% endcomment %}
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start"><a href="https://github.com/Vatsal-and-Sweeya/BookCave_Front/blob/main/LICENSE" style="text-decoration:none;color:black;">  <span style="text-decoration:underline;">Copyright &copy; 2021</span> Vatsal-and-Sweeya</a></div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        Made with 
+                        <i class="fa fa-heart"></i>
+                        by 
+                        <a href="https://github.com/vatsal-ts/" style="text-decoration: underline; color:black;"> Vatsal </a> and <a href="https://github.com/sweeya2" style="text-decoration: underline; color:black;"> Sweeya </a>
+
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        Repository can be found on <a href="https://github.com/Vatsal-and-Sweeya/BookCave_Front" >GitHub<i class="fab fa-github"></i> </a>.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'maintool/js/scripts.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+    <script>
+        {% if message %}
+        alert('{{message}}');
+        {% endif %}
+    </script>
+</html>
