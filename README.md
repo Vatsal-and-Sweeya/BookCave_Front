@@ -14,8 +14,10 @@
 Created by [Sweeya Reddy](https://github.com/sweeya2) and [Vatsal Gupta](https://github.com/vatsal-ts)
 
 
+## Video Walkthrough
+https://github.com/vatsal-ts/BookCave_Front/assets/84033475/284df8f6-3159-476a-908d-2fd0b9857987
 
-https://user-images.githubusercontent.com/77005617/177173777-b38beeda-e73f-4a45-907c-f518fb63f09c.mp4
+
 
 
 ## Features
