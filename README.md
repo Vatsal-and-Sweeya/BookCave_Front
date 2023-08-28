@@ -1,6 +1,6 @@
 # BookCave- Web app for searching, previewing and downloading books
-## Heroku hosted
-* https://cutt.ly/bookcave_vs
+## Vercel hosted
+* [BookCave](https://book-cave-django.vercel.app/maintool/#services)
 ## Table of contents
 * [General info](#general-info)
 * [Features](#features)
